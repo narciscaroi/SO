@@ -1,0 +1,42 @@
+Nume: Caroi Narcis-Florin
+Grupa: 336CB
+
+# Tema 2 Biblioteca stdio:
+
+Organizare
+-
+	* Implementarea am incercat sa o fac cat mai optima. Probabil, daca stai sa analizezi, mai sunt parti
+de cod de optimizat. In acelasi timp, si din cauza enuntului, care nu mi s-a parut
+complet, mai erau cazuri de adaugat, din acest motiv cred ca imi pica 2 teste.
+
+Implementare
+-
+	* Nu am implementat functiile so_popen si so_pclose
+	* Pe langa cele 2 functii neimplementate, imi pica si alte 2 teste
+	* Dificultățile intampinate, din punctul meu de vedere, au fost
+explicatiile din enunt, de multe ori nu intelegeam exact ce ar trebui sa faca
+o functie
+
+Cum se compilează si cum se rulează?
+-
+	* Compilat: 	gcc -Wall -g -fPIC -c so_stdio.c
+			gcc -Wall -shared so_stdio.o -o libso_stdio.so
+	* Biblioteci linkate: 	<sys/types.h> 
+				<sys/stat.h>
+				<fcntl.h>
+				<string.h>
+				<unistd.h>
+				<stdio.h>
+				<sys/wait.h>
+
+Resurse utilizate:
+-
+	https://www.tutorialspoint.com/unix_system_calls/open.htm
+	https://man7.org/linux/man-pages/man2/close.2.html
+	https://man7.org/linux/man-pages/man2/read.2.html
+	https://man7.org/linux/man-pages/man2/write.2.html
+	https://stackoverflow.com/questions/33438701/what-is-the-functionality-of-fgetchar-is-it-necessary-to-flush-the-standard
+	https://www.geeksforgeeks.org/fgetc-fputc-c/
+	https://www.tutorialspoint.com/fgetc-and-fputc-in-c
+	https://pubs.opengroup.org/onlinepubs/009695399/functions/fputc.html
+

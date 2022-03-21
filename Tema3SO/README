@@ -1,0 +1,25 @@
+Nume: Caroi Narcis-Florin
+Grupa: 336CB
+
+# Tema 3 Loader de Executabile
+Organizare
+-
+	# In init_loader, partea de setare a semnalului am preluat-o din laboratororul,
+	iar in functia segv_handler verific daca adresa la care am primit segfault este
+	prin segemente. Daca este, verific daca este mapata cu ajutorul lui msync, in
+	cazul in care nu este mapata, mapez pagina si verific pe ce caz ma aflu pentru
+	setarea cu 0 intre vaddr+[file_size,mem_size].
+	# Ce puteam sa schimb la tema, probabil cazurile de memset, daca stateam sa 
+	gandesc anumite formule, cred ca puteam sa ajung la un singur if.
+
+Implementare
+-
+	# Tema este implemetata integral
+
+Bibliografie
+-
+	- laborator 6, exercitiul 5, functia set_signal
+	- laborator 6, exercitiul 5, functia segv_handel baza, neimplementata
+	- https://www.mkssoftware.com/docs/man5/siginfo_t.5.asp
+	- https://stackoverflow.com/questions/8362747/how-can-i-detect-whether-a-specific-page-is-mapped-in-memory
+	- https://man7.org/linux/man-pages/man2/msync.2.html
